@@ -126,6 +126,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
 }
 
+.navbar-brand {padding: 0;line-height:0;}
+
+.header-fixed #logo {position: relative;top: -10px;}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -136,6 +140,15 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../img/mountain.jpg) center 90em;
   background-size: cover;
   position: relative;
+}
+
+#hero.inner-page {
+  height: 280px;
+  background-position: center 70rem;
+}
+
+#hero.inner-page .hero-container {
+  align-items: normal;
 }
 
 @media (min-width: 1024px) {
@@ -152,6 +165,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
+}
+
+#hero.inner-page:before {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 #hero .hero-container {
@@ -499,8 +516,27 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* About Us Section
 --------------------------------*/
 #about {
-  background: #fff;
+  background: #f7f7f7;
   padding: 80px 0;
+}
+
+#about.odd {
+  background: #FFFFFF;
+}
+
+#about img {
+  width: 100%;
+}
+
+.products #about ul {
+  list-style: none;
+}
+
+.products #about ul li::before {
+  content: "\f138";
+  font: normal normal normal 14px/1 FontAwesome;
+  color: #01a417;
+  margin-right: 8px;
 }
 
 #about .about-container .background {
@@ -510,7 +546,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-container .content {
-  background: #fff;
+  background: transparent;
 }
 
 #about .about-container .title {
@@ -534,7 +570,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-container .icon-box {
-  background: #fff;
+  background: transparent;
   background-size: cover;
   padding: 0 0 30px 0;
 }
@@ -570,8 +606,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #111;
 }
 
-#about .about-container .icon-box .description {
+#about .about-container .icon-box p.description {
   margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+#about .about-container .icon-box ul.description {
+  margin-left: 70px;
   line-height: 24px;
   font-size: 14px;
 }
@@ -609,7 +651,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 50px;
   text-align: center;
   border: 1px solid #e6e6e6;
-  height: 200px;
+  height: 240px;
   position: relative;
   background: #fafafa;
 }
@@ -721,6 +763,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 #services .description {
   font-size: 14px;
   line-height: 24px;
+}
+
+.services ul {
+  list-style: none;
+}
+
+.services ul li::before {
+  content: "\f138";
+  font: normal normal normal 14px/1 FontAwesome;
+  color: #01a417;
+  margin-right: 8px;
 }
 
 /* Call To Action Section
@@ -855,6 +908,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio .portfolio-item:hover .details {
   bottom: 0;
+  height: 100%;
+  background: rgba(45, 201, 151, 0.5);
+}
+
+#portfolio .portfolio-item:hover .details * {
+  font-size: 1em;
 }
 
 #portfolio .portfolio-item:hover img {
@@ -864,7 +923,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Team Section
 --------------------------------*/
 #team {
-  background: #fff;
+  background: #f7f7f7;
   padding: 80px 0 60px 0;
 }
 

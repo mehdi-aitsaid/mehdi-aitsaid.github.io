@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header #logo img {
   padding: 0;
-  margin: 0;
+  margin: -11px 0 0 0;
 }
 
 @media (max-width: 768px) {
@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-fixed {
-  background: rgba(52, 59, 64, 0.9);
+  background: rgb(255, 255, 255);
   padding: 20px 0;
   height: 72px;
   transition: all 0.5s;
@@ -137,14 +137,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
   /*background: url(../img/hero-bg.jpg) top center;*/
-  background: url(../img/mountain.jpg) center 90em;
+  /*background: url(../img/mountain.jpg) center 90em;*/
+  background: url(../img/photo-mountains.jpg) center center;
   background-size: cover;
   position: relative;
 }
 
 #hero.inner-page {
   height: 280px;
-  background-position: center 70rem;
 }
 
 #hero.inner-page .hero-container {
@@ -157,18 +157,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#hero:before {
+#hero::before {
   content: "";
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, rgba(253, 251, 251, 0.4) 0%, #ebedee6e 100%);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
-}
-
-#hero.inner-page:before {
-  background: rgba(0, 0, 0, 0.4);
 }
 
 #hero .hero-container {
@@ -193,6 +189,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+#hero h1, #hero h2 {
+  text-shadow: 4px 2px 6px rgb(0, 0, 0);
+}
+
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 28px;
@@ -201,9 +201,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: #eee;
+  color: #fff;
   margin: 30px auto 50px;
   font-size: 24px;
+  width: 80%;
 }
 
 @media (max-width: 768px) {
@@ -310,13 +311,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 8px 10px 8px;
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color: #000;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 13px;
   outline: none;
 }
+
+#header.header-fixed .nav-menu a {
+  color: #000000;
+}
+
 
 .nav-menu > li {
   margin-left: 10px;
@@ -1027,7 +1033,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
-#contact .form #sendmessage {
+#contact .form #sendmessage , #contact .form .output_message {
   color: #2dc997;
   border: 1px solid #2dc997;
   display: none;
